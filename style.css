@@ -66,6 +66,16 @@ body {
   line-height: 1.5;
 }
 
+body,
+.main-header,
+.main-footer,
+.main-navbar-link,
+.logo {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
 /* Main Header */
 
 .main-header {
@@ -91,6 +101,15 @@ body {
   list-style-type: none;
 }
 
+.main-navbar-links li {
+  display: flex;
+}
+
+.main-navbar-link {
+  display: flex;
+  align-items: center;
+}
+
 .main-navbar-link,
 .logo {
   display: inline-block;
@@ -106,6 +125,35 @@ body {
 .main-navbar-link:hover,
 .logo:hover {
   background: #ddd;
+}
+
+/* Day/Night Mode Toggler */
+
+.theme-toggle {
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+body.dark-mode {
+  background: #222;
+  color: #ddd;
+}
+
+body.dark-mode .main-header,
+body.dark-mode .main-footer {
+  background: #111;
+}
+
+body.dark-mode .main-navbar-link,
+body.dark-mode .logo {
+  color: #fff;
+}
+
+body.dark-mode .main-navbar-link:hover,
+body.dark-mode .logo:hover {
+  background: #333;
 }
 
 /* Overlay for Hero and Banners */
